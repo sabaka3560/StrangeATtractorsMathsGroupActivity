@@ -1,0 +1,373 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+  <meta name="dc.title" CONTENT="Strange Attractors">
+  <meta http-equiv='cache-control' content='no-cache'>
+  <meta http-equiv='expires' content='0'>
+  <meta http-equiv='pragma' content='no-cache'>
+
+
+
+  <title>Strange Attractors</title>
+
+  <link rel="stylesheet" href="main.css">
+
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+		  TeX: { equationNumbers: { autoNumber: "AMS" } }
+				});
+		   </script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+		   </script>
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML">
+  </script>
+
+
+
+
+</head>
+
+
+<body class="is-preload">
+
+  <div class="container">
+
+
+    <div id="page-wrapper">
+
+
+
+
+      <!-- Main -->
+      <article id="main">
+
+        <header>
+  <h2 class="web-heading">Strange Attractors</h2>
+  <p class="web-desc">Interactive 3D simulations</p>
+</header>
+<section class="wrapper style5">
+  <div class="inner">
+
+    <header>
+      <p>Group Activity Internet and Web Programming</p>
+    </header>
+
+    <h3 id="intro">Introduction</h3>
+
+    <p>The term <strong>&apos;Strange Attractor&apos;</strong> is used to
+      describe an attractor (a region or shape to which points
+      are &apos;pulled&apos; as the result of a certain process) that displays
+      sensitive dependence on initial conditions (that is, points
+      which are initially close on the attractor become
+      exponentially separated with time).
+      The most famous strange attractor is undoubtedly
+      the Lorenz attractor - a three dimensional object whose
+      body plan resembles a butterfly or a mask. The Lorenz
+      attractor, named for its discoverer Edward N. Lorenz,
+      arose from a mathematical model of the atmosphere .</p>
+
+    <p>Imagine a rectangular slice of air heated from below and
+      cooled from above by edges kept at constant
+      temperatures. This is our atmosphere in its simplest
+      description. The bottom is heated by the earth and the top
+      is cooled by the void of outer space. Within this slice,
+      warm air rises and cool air sinks.
+      The state of the atmosphere in this model can be
+      described by three time-evolving variables
+      </p><ul>
+        <li>x = the convective flow</li>
+        <li>y = the horizontal temperature distribution</li>
+        <li>z = the vertical temperature distribution</li>
+      </ul>
+      with three parameters describing the character of the
+      model itself
+      <ul>
+        <li>$\sigma$ [sigma] = the ratio of viscosity to thermal conductivity</li>
+        <li>$\rho$ [rho] = the temperature difference between the top and
+          bottom of the slice</li>
+        <li>$\beta$ [beta] = the width to height ratio of the slice</li>
+      </ul>
+      and a system of three ordinary differential equations
+      describing the appropriate laws of fluid dynamics
+      $$\left\{ \begin{eqnarray*}
+      \frac{dx}{dt}&amp;=&amp;\sigma (-x + y)\\
+      \frac{dy}{dt}&amp;=&amp; -x z + \rho x - y \\
+      \frac{dz}{dt}&amp;=&amp; x y - \beta z
+      \end{eqnarray*}\right.
+      $$
+      When $\rho$ = 28, $\sigma$ = 10, and $\beta$ = 8/3, a solution curve of this
+      system has the shape of the iconic butterfly and the
+      position of particles will follow a similar path.<p></p>
+
+
+      <iframe src="https://editor.p5js.org/raunakkkk/full/VR6fE7bv-" scrolling="no" width="100%" height="500px" style="border:0px;border:1px solid black"></iframe>
+      <div class="row aln-center" style="font-size:16px">
+          <div class="col-4 col-6-medium">
+            <ul class="actions stacked">
+              <li><a href="https://editor.p5js.org/raunakkkk/full/VR6fE7bv-" target="_blank" class="button small fit">Full Screen</a></li>
+            </ul>
+          </div>
+      </div>
+
+
+
+    <p>The Lorenz attractor was the first strange attractor, but
+      there are many systems of equations that give rise to
+      strange attractors. In the next section you will find simulations
+      of strange attractors with particles moving based on
+      the given system of ordinary differential equations,
+      including one (or two) solution curve(s). Change the parameters
+      to observe the behaviour of the particles and the solution curve(s).
+      To access the simulation just click on the image.
+    </p>
+
+
+
+    <hr>
+
+
+
+    <section id="simulations">
+      <h3>Interactive simulations</h3>
+      <div class="box alt">
+        <div class="row gtr-50 gtr-uniform">
+          <!--First row-->
+          <div  id="thomas" class="col-4"><span class="image fit"><a href="thomas/thomas.html"><img src="img/thomas.png" alt></a></span>
+            <span style="font-size:18px">
+              <h3><a href="thomas/thomas.html">Thomas</a></h3>
+              <p>Parameter:</p>
+              <div>
+                <p>$b=0.208186$</p>
+              </div>
+              <p>System:</p>
+              <p> $\left\{ \begin{eqnarray*}
+                \frac{dx}{dt}&amp;=&amp;\sin y -bx\\
+                \frac{dy}{dt}&amp;=&amp;\sin z -by\\
+                \frac{dz}{dt}&amp;=&amp;\sin x-bz
+                \end{eqnarray*}\right.
+                $</p>
+            </span>
+          </div>
+          <div id="aizawa" class="col-4"><span class="image fit"><a href="aizawa/aizawa.html"><img src="img/aizawa.png" alt></a></span>
+            <span style="font-size:18px">
+              <h3><a href="aizawa/aizawa.html">Aizawa</a></h3>
+              <p>Parameters:</p>
+              <div>
+                <p>$a = 0.95,$ $b = 0.7,$ $c = 0.6,$<br>
+                  $d = 3.5,$ $e = 0.25,$ $f = 0.1$</p>
+              </div>
+              <p>System:</p>
+              <p> $\left\{ \begin{eqnarray*}
+                \frac{dx}{dt}&amp;=&amp;(z - b)  x - d  y\\
+                \frac{dy}{dt}&amp;=&amp; d  x + (z - b)  y\\
+                \frac{dz}{dt}&amp;=&amp;c + a z - \frac{z^3}{3} -\\&amp;  &amp;\;(x^2+y^2)(1+e z)+f z x^3
+                \end{eqnarray*}\right.
+                $</p>
+            </span>
+          </div>
+          <div id="lorenz" class="col-4"><span class="image fit"><a href="lorenz/lorenz.html"><img src="img/lorenz.png" alt></a></span>
+            <span style="font-size:18px">
+              <h3><a href="lorenz/lorenz.html">Lorenz</a></h3>
+              <p>Parameters:</p>
+              <div class="w3-center">
+                <p>$\sigma = 10,$ $\rho = 28,$ $\beta = 8/3$</p>
+              </div>
+              <p>System:</p>
+              <p>$\left\{ \begin{eqnarray*}
+                \frac{dx}{dt}&amp;=&amp;\sigma  (-x + y)\\
+                \frac{dy}{dt}&amp;=&amp;  -x  z + \rho  x - y \\
+                \frac{dz}{dt}&amp;=&amp; x  y - \beta  z
+                \end{eqnarray*}\right.
+                $</p>
+            </span>
+          </div>
+
+          <!--Second row-->
+          <div id="dadras" class="col-4"><span class="image fit"><a href="dadras/dadras.html"><img src="img/dadras.png" alt></a></span>
+            <span style="font-size:18px">
+              <h3><a href="dadras/dadras.html">Dadras</a></h3>
+              <p>Parameters:</p>
+              <div>
+                <p>$a = 3,$ $b = 2.7,$ $c = 1.7,$ <br> $d = 2,$ $e = 9$</p>
+              </div>
+              <p>System:</p>
+              <p> $\left\{ \begin{eqnarray*}
+                \frac{dx}{dt}&amp;=&amp; y - a x +b  y  z\\
+                \frac{dy}{dt}&amp;=&amp;  c  y - x  z +z\\
+                \frac{dz}{dt}&amp;=&amp; d  x  y - e  z
+                \end{eqnarray*}\right.
+                $</p>
+            </span>
+          </div>
+          <div id="chen" class="col-4"><span class="image fit"><a href="chen/chen.html"><img src="img/chen.png" alt></a></span>
+            <span style="font-size:18px">
+              <h3><a href="chen/chen.html">Chen</a></h3>
+              <p>Parameters:</p>
+              <div>
+                <p>$\alpha = 5$, $\beta = -10$, $\delta = -0.38$</p>
+              </div>
+              <p>System:</p>
+              <p> $\left\{ \begin{eqnarray*}
+                \frac{dx}{dt}&amp;=&amp;\alpha x- y z\\
+                \frac{dy}{dt}&amp;=&amp;\beta y + x z \\
+                \frac{dz}{dt}&amp;=&amp;\delta z + x y/3
+                \end{eqnarray*}\right.
+                $</p>
+            </span>
+          </div>
+          <div id="lorenz84" class="col-4"><span class="image fit"><a href="lorenz83/lorenz83.html"><img src="img/lorenz84.png" alt></a></span>
+            <span style="font-size:18px">
+              <h3><a href="lorenz83/lorenz83.html">Lorenz83</a></h3>
+              <p>Parameters:</p>
+              <div>
+                <p>$a = 0.95,$ $b = 7.91,$ $f = 4.83,$ $g = 4.66$ </p>
+              </div>
+              <p>System:</p>
+              <p> $\left\{ \begin{eqnarray*}
+                \frac{dx}{dt}&amp;=&amp;-a x - y^2 - z^2 + a f\\
+                \frac{dy}{dt}&amp;=&amp; -y + x y - b x z + g\\
+                \frac{dz}{dt}&amp;=&amp; -z + b x y + x z
+                \end{eqnarray*}\right.
+                $</p>
+            </span>
+          </div>
+
+          <!--Third row-->
+          <div id="rossler" class="col-4"><span class="image fit"><a href="rossler/rossler.html"><img src="img/rossler.png" alt></a></span>
+            <span style="font-size:18px">
+              <h3><a href="rossler/rossler.html">R&#xF6;ssler</a></h3>
+              <p>Parameters:</p>
+              <div class="w3-center">
+                <p>$a = 0.2$, $b = 0.2$, $c = 5.7$</p>
+              </div>
+              <p>System:</p>
+              <p> $\left\{ \begin{eqnarray*}
+              \frac{dx}{dt}&amp;=&amp;-(y+z)\\
+              \frac{dy}{dt}&amp;=&amp;x+ay\\
+              \frac{dz}{dt}&amp;=&amp;b+z(x-c)
+              \end{eqnarray*}\right.
+              $</p>
+            </span>
+          </div>
+          <div id="halvorsen" class="col-4"><span class="image fit"><a href="halvorsen/halvorsen.html"><img src="img/halvorsen.png" alt></a></span>
+            <span style="font-size:18px">
+              <h3><a href="halvorsen/halvorsen.html">Halvorsen</a></h3>
+              <p>Parameter:</p>
+              <div class="w3-center">
+                <p>$a = 1.89$ </p>
+              </div>
+              <p>System:</p>
+              <p> $\left\{ \begin{eqnarray*}
+                \frac{dx}{dt}&amp;=&amp;-a x-4y-4z-y^2 \\
+                \frac{dy}{dt}&amp;=&amp; -a y-4z-4x-z^2  \\
+                \frac{dz}{dt}&amp;=&amp; -a z-4x-4y-x^2
+                \end{eqnarray*}\right.
+                $</p>
+            </span>
+          </div>
+          <div id="rabinovich" class="col-4"><span class="image fit"><a href="rabinovich/rabinovich.html"><img src="img/rabinov.png" alt></a></span>
+            <span style="font-size:18px">
+              <h3><a href="rabinovich/rabinovich.html">Rabinovich-Fabrikant</a></h3>
+              <p>Parameters:</p>
+              <div class="w3-center">
+                <p>$\alpha = 0.14$, $\gamma = 0.10$</p>
+              </div>
+              <p>System:</p>
+              <p> $\left\{ \begin{eqnarray*}
+                \frac{dx}{dt}&amp;=&amp;y ( z - 1 + x^2 ) + \gamma  x\\
+                \frac{dy}{dt}&amp;=&amp;x  ( 3  z + 1 - x^2 ) + \gamma  y\\
+                \frac{dz}{dt}&amp;=&amp; - 2  z  ( \alpha + x y )
+                \end{eqnarray*}\right.
+                $</p>
+            </span>
+          </div>
+
+          <!--Forth row-->
+          <div id="threescroll" class="col-4"><span class="image fit"><a href="threescroll/threescroll.html"><img src="img/tscus.png" alt></a></span>
+            <span style="font-size:18px">
+              <h3><a href="threescroll/threescroll.html">Three-Scroll Unified Chaotic System</a></h3>
+              <p>Parameters:</p>
+              <div class="w3-center">
+                <p>$a = 32.48,$ $b = 45.84,$ $c = 1.18,$ <br> $d = 0.13,$ $e = 0.57$, $f = 14.7$</p>
+              </div>
+              <p>System:</p>
+              <p> $\left\{ \begin{eqnarray*}
+                \frac{dx}{dt}&amp;=&amp;a(y-x)+d x z \\
+                \frac{dy}{dt}&amp;=&amp; bx-x z + f y  \\
+                \frac{dz}{dt}&amp;=&amp; cz+xy-ex^2
+                \end{eqnarray*}\right.
+                $</p>
+            </span>
+          </div>
+          <div id="sprott" class="col-4"><span class="image fit"><a href="sprott/sprott.html"><img src="img/sprott.png" alt></a></span>
+            <span style="font-size:18px">
+              <h3><a href="sprott/sprott.html">Sprott</a></h3>
+              <p>Parameters:</p>
+              <div class="w3-center">
+                <p>$a = 2.07$, $b = 1.79$</p>
+              </div>
+              <p>System:</p>
+                        <p> $\left\{ \begin{eqnarray*}
+                          \frac{dx}{dt}&amp;=&amp; y + a x y +x z \\
+                          \frac{dy}{dt}&amp;=&amp; 1 - b x^2 +yz \\
+                          \frac{dz}{dt}&amp;=&amp; x-x^2-y^2
+                          \end{eqnarray*}\right.
+                          $</p>
+            </span>
+          </div>
+          <div id="wangsu" class="col-4"><span class="image fit"><a href="fourwing/fourwing.html"><img src="img/wangsu.png" alt></a></span>
+            <span style="font-size:18px">
+              <h3><a href="fourwing/fourwing.html">Four-Wing</a></h3>
+              <p>Parameters:</p>
+              <div class="w3-center">
+                <p>$a = 0.2,$ $b = 0.01,$ $c = -0.4$</p>
+              </div>
+              <p>System</p>
+              <p> $\left\{ \begin{eqnarray*}
+                \frac{dx}{dt}&amp;=&amp; ax+yz \\
+                \frac{dy}{dt}&amp;=&amp; b x + cy - xz \\
+                \frac{dz}{dt}&amp;=&amp; -z-xy
+                \end{eqnarray*}\right.
+                $</p>
+            </span>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+
+
+
+
+
+
+
+    <hr>
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+</body>
+
+
+</html>

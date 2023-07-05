@@ -1,0 +1,35 @@
+<html>
+    <title>Lorenz84 attractor</title>
+    <head>
+        <meta charset="UTF-8">
+            
+            <script language="javascript" type="text/javascript" src="p5.min.js"></script>
+            <script language="javascript" type="text/javascript" src="p5.dom.min.js"></script>
+            <script language="javascript" type="text/javascript" src="p5.easycam.min.js"></script>
+            <script language="javascript" type="text/javascript" src="lorenz84.js"></script>
+            <script language="javascript" type="text/javascript" src="dat.gui.min.js"></script>
+            
+            <link rel="stylesheet" type="text/css" href="style.css">
+            
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121691678-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'UA-121691678-1');
+</script>
+    </head>
+    
+    <body>
+        <div id="easycamhud" class="hud unselectable">
+            <h3>Parameters</h3>
+            <div>
+                <ul id="hud-left" class="two"></ul>
+                <ul id="hud-right" class="two"></ul>
+            </div>
+        </div>
+    </body>
+</html>
+
